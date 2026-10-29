@@ -1,0 +1,26 @@
+BASE DE FACTURAS SIN LOGIN - INFINITYFREE
+
+CONTENIDO
+- backend\database.sql: estructura sin tabla de usuarios y datos iniciales
+  (120 facturas). Reemplaza las tablas del sistema en la base seleccionada.
+- backend\vistas_facturas.sql: actualiza las vistas sin borrar las tablas
+  ni los datos existentes.
+
+INSTALACION DESDE CERO
+1. Crea una base MySQL en InfinityFree.
+2. Abre phpMyAdmin, selecciona esa base e importa backend\database.sql.
+3. Configura las credenciales de esa base en backend\config\database.php
+   dentro del ZIP del sistema.
+
+BASE EXISTENTE
+No importes database.sql: elimina y vuelve a cargar las tablas de facturas.
+Haz primero un respaldo y ejecuta backend\vistas_facturas.sql para actualizar
+v_facturas y v_facturas_completo conservando los datos.
+
+La vista requerida es:
+CREATE VIEW v_facturas AS SELECT *, YEAR(emision) AS anio FROM facturas;
+
+Este sistema funciona sin login. La base no crea ni necesita usuarios para
+autenticarse en la aplicación. No obstante, cualquier persona que conozca la
+direccion del sistema puede consultar y modificar datos. Compartir el enlace
+no restringe el acceso.

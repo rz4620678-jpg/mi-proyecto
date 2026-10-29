@@ -1,0 +1,24 @@
+PAQUETE PORTABLE - SISTEMA DE FACTURAS
+
+1. Extrae toda esta carpeta en la computadora del cliente, por ejemplo en
+   C:\FacturasPortable o una carpeta de Documentos donde pueda guardar archivos.
+   No la coloques dentro de Archivos de programa ni Windows.
+2. Ejecuta INICIAR.bat. El navegador se abre en el sistema local. Si los
+   puertos habituales ya estan ocupados, el iniciador buscara otros libres.
+3. No ejecutes INICIAR.bat otra vez mientras la aplicacion este abierta. Para
+   cerrar y reiniciar correctamente, ejecuta CERRAR.bat antes de INICIAR.bat.
+4. No borres ni muevas las carpetas data, logs o run mientras el sistema este
+   en uso. La carpeta data contiene la base de datos del cliente.
+5. Haz copias de seguridad periodicas desde la opcion Respaldo del sistema.
+   Guarda los respaldos en otro disco o ubicacion segura.
+6. El sistema se ejecuta localmente en la computadora donde se extrae
+   (localhost); no lo publiques en Internet ni abras sus puertos a la red.
+7. Abre CREDENCIALES_INICIALES.txt para obtener el usuario y la clave
+   temporal. Cambia la clave desde el sistema en la primera entrada.
+8. Excel no se sincroniza automáticamente con el sistema. Los cambios y
+   registros nuevos se realizan desde la aplicación y se guardan en su base de
+   datos. La exportación de las pantallas genera archivos CSV independientes.
+
+La carpeta www contiene el backend PHP y el frontend React ya compilado.
+PHP y MariaDB se ejecutan desde carpetas locales; no requiere Node.js, XAMPP
+ni Microsoft Excel.
